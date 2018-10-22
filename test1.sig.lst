@@ -1,0 +1,103 @@
+      Code                Name      Line    Column
+
+       401           PROCEDURE         1         1
+      1001                PROC         1        11
+        40                   (         1        15
+      1002                 KEY         1        16
+        58                   :         1        19
+       501               VALUE         1        20
+        59                   ;         1        27
+       502                  24         1        29
+        59                   ;         1        31
+      1003                 EKE         1        33
+        58                   :         1        36
+       503                 123         1        37
+        59                   ;         1        40
+       504                   4         1        42
+        44                   ,         1        43
+       505                  76         1        45
+        41                   )         1        47
+        59                   ;         1        48
+       403               LABEL         2         1
+       506                   8         2         7
+        44                   ,         2         8
+       507                   3         2        10
+        44                   ,         2        11
+       502                  24         2        13
+        59                   ;         2        15
+       404               BEGIN         3         1
+       405                 END         4         1
+        59                   ;         4         4
+        -1                   ÿ         4         5
+
+
+PROG()
+      'PROCEDURE'
+      PROCIDNT()
+            'PROC'
+      PARAMS()
+            '('
+            DECLIST()
+                  DECL()
+                        IDENT()
+                              'KEY'
+                        ':'
+                        ATTRLIST()
+                              ATTR()
+                                    'VALUE'
+                              ATTRLIST()
+                                    EMPTY()
+                  DECLIST()
+                        LABELLIST()
+                              '24'
+                              LABELLIST()
+                                    EMPTY()
+                        DECLIST()
+                              DECL()
+                                    IDENT()
+                                          'EKE'
+                                    ':'
+                                    ATTRLIST()
+                                          ATTR()
+                                                '123'
+                                          ATTRLIST()
+                                                EMPTY()
+                              DECLIST()
+                                    LABELLIST()
+                                          '4'
+                                          LABELLIST()
+                                                ','
+                                                CONST()
+                                                      '76'
+                                                LABELLIST()
+                                                      EMPTY()
+                                    DECLIST()
+                                          EMPTY()
+                              ';'
+                        ';'
+                  ';'
+            ')'
+      ';'
+      BLOCK()
+            DECLARATION()
+                  LABELDECL()
+                        'LABEL'
+                        CONST()
+                              '8'
+                        LABELLIST()
+                              ','
+                              CONST()
+                                    '3'
+                              LABELLIST()
+                                    ','
+                                    CONST()
+                                          '24'
+                                    LABELLIST()
+                                          EMPTY()
+                        ';'
+            'BEGIN'
+            STATMLIST()
+                  EMPTY()
+            'END'
+      ';'
+
